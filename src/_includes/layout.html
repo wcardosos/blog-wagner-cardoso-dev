@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/ico" href="/assets/favicon.ico" />
+    <title>Blog do Wagner</title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <style type="text/tailwindcss">
+      @theme {
+        --color-brand-black: #262525;
+        --color-brand-black-light: #2A2A2C;
+        --color-brand-red: #E53E3E;
+
+        --font-sans: 'Montserrat', sans-serif;
+      }
+
+      body {
+        @apply bg-brand-black text-zinc-50;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="max-w-5xl mx-auto px-6 pt-6 pb-6 md:pt-10 xl:px-0">
+      <header class="flex items-center justify-between">
+        <div class="flex items-center gap-2">
+          <img src="https://github.com/wcardosos.png" alt="Wagner Cardoso" class="w-12 h-12 rounded-full">
+          <strong>Wagner Cardoso</strong>
+          <div class="flex items-center gap-1">
+            <a href="https://github.com/wcardosos">
+              <img src="/assets/github.svg" alt="GitHub" class="h-4 w-4">
+            </a>
+            <a href="https://linkedin.com/in/wagner-cardoso-dev">
+              <img src="/assets/linkedin.svg" alt="GitHub" class="h-4 w-4">
+            </a>
+          </div>
+        </div>
+
+        <img src="/assets/logo.png" alt="Logo" class="h-12 w-12">
+      </header>
+      {{ content }}
+    </main>
+  </body>
+</html>
