@@ -2,4 +2,19 @@
 layout: layout.html
 ---
 
-Content
+<head>
+  <title>Wagner Cardoso - Blog</title>
+</head>
+
+<section class="grid lg:grid-cols-2 gap-4 lg:gap-6 mt-6 lg:mt-10">
+  {% for post in collections.post %}
+  <article class="flex flex-col gap-4 p-6 rounded-lg border border-zinc-500">
+    <a href="{{ post.url }}" class="w-fit">
+      <h2 class="text-xl font-bold text-brand-red hover:text-brand-red/90">{{ post.data.title }}</h2>
+    </a>
+    <span class="text-sm text-zinc-300">{{ post.data.date | formatDate }}</span>
+    <p>{{ post.data.summary }}</p>
+    <a href="{{ post.url }}" class="text-brand-red font-semibold hover:text-brand-red/90 w-fit">Ler mais</a>
+  </article>
+  {% endfor %}
+</section>

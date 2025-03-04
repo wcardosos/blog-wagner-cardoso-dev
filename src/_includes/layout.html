@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/ico" href="/assets/favicon.ico" />
-    <title>Blog do Wagner</title>
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -29,7 +28,7 @@
       <header class="flex items-center justify-between">
         <div class="flex items-center gap-2">
           <img src="https://github.com/wcardosos.png" alt="Wagner Cardoso" class="w-12 h-12 rounded-full">
-          <strong>Wagner Cardoso</strong>
+          <a href="/"><strong class="hover:text-brand-red">Wagner Cardoso</strong></a>
           <div class="flex items-center gap-1">
             <a href="https://github.com/wcardosos">
               <img src="/assets/github.svg" alt="GitHub" class="h-4 w-4">
@@ -42,7 +41,28 @@
 
         <img src="/assets/logo.png" alt="Logo" class="h-12 w-12">
       </header>
+
       {{ content }}
+
+      <footer class="flex flex-col-reverse lg:flex-row lg:justify-center gap-4 mt-16">
+        <div class="flex items-center gap-2">
+          <img src="/assets/logo.png" class="w-12 h-12 md:w-16 md:h-16" alt="Wagner Cardoso Dev Logo" />
+          <span>Wagner Cardoso</span>
+        </div>
+        
+        <div class="flex flex-col gap-2">
+          <strong>Contato</strong>
+          <div class="flex gap-2">
+            <a href="https://github.com/wcardosos" target="_blank" rel="noopener noreferrer" class="hover:text-brand-red">Github</a>
+            <span>/</span>
+            <a href="https://www.linkedin.com/in/wagner-cardoso-dev/" target="_blank" rel="noopener noreferrer" class="hover:text-brand-red">LinkedIn</a>
+            <span>/</span>
+            <a href="mailto:wagnerdev01@gmail.com" class="hover:text-brand-red">E-mail</a>
+          </div>
+        </div>
+
+        <a href="https://blog.wagnercardoso.dev" target="_blank" rel="noopener noreferrer" class="hover:text-brand-red font-bold">Blog</a>
+      </footer>
     </main>
   </body>
 </html>

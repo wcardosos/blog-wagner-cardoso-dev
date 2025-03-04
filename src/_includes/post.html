@@ -1,0 +1,126 @@
+---
+layout: layout.html
+---
+
+<head>
+  <title>{{ title }} - Wagner Cardoso</title>
+</head>
+
+<article class="mt-10 lg:mt-16">
+  <section class="space-y-2">
+    <h1 class="font-bold text-3xl text-brand-red">{{ title }}</h1>
+    <span class="text-sm text-zinc-300">{{ date | formatDate }}</span>
+  </section>
+
+  <section class="post">
+    {{ content }}
+  </section>
+</article>
+
+<style>
+  .post {
+    font-family: 'Montserrat', sans-serif;
+    color: #f4f4f5; /* text-zinc-50 */
+    line-height: 1.75;
+    width: 100%;
+  }
+
+  .post h1 {
+    font-size: 1.5rem; /* text-2xl */
+    font-weight: bold;
+    color: #E53E3E; /* color-brand-red */
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .post h2 {
+    font-size: 1.25rem; /* text-2xl */
+    font-weight: 700;
+    color: #E53E3E; /* color-brand-red */
+    margin-top: 1.25rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .post h3 {
+    font-size: 1.125rem; /* text-xl */
+    font-weight: 700;
+    color: #E53E3E; /* color-brand-red */
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .post p {
+    font-size: 1rem; /* text-base */
+    margin-bottom: 1rem;
+  }
+
+  .post a {
+    color: #E53E3E; /* color-brand-red */
+    text-decoration: underline;
+    transition: color 0.2s;
+  }
+
+  .post a:hover {
+    color: #DC2626; /* text-red-500 */
+  }
+
+  .post blockquote {
+    border-left: 4px solid #E53E3E; /* color-brand-red */
+    font-style: italic;
+    color: #71717a; /* text-zinc-400 */
+    padding-left: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+
+  .post ul {
+    list-style-type: disc;
+    padding-left: 1.25rem;
+    margin-bottom: 1rem;
+  }
+
+  .post ol {
+    list-style-type: decimal;
+    padding-left: 1.25rem;
+    margin-bottom: 1rem;
+  }
+
+  .post li {
+    margin-bottom: 0.5rem;
+  }
+
+  .post pre {
+    background-color: #2A2A2C; /* color-brand-black-light */
+    padding: 1rem;
+    border-radius: 0.5rem;
+    overflow-x: auto;
+    font-size: 0.875rem; /* text-sm */
+    color: #e4e4e7; /* text-zinc-200 */
+  }
+
+  .post code {
+    background-color: #3f3f46; /* bg-zinc-700 */
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    font-size: 0.875rem; /* text-sm */
+    color: #e4e4e7; /* text-zinc-200 */
+  }
+
+  .post table {
+    border-collapse: collapse;
+    margin-bottom: 1.5rem;
+    overflow-x: scroll;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .post td, th {
+    padding: 0.5rem;
+    border-bottom: 1px solid #e4e4e7;
+  }
+
+  .post thead {
+    color: #E53E3E;
+    text-align: left;
+  }
+</style>
