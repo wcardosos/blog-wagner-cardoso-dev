@@ -109,9 +109,7 @@ layout: layout.html
   .post table {
     border-collapse: collapse;
     margin-bottom: 1.5rem;
-    overflow-x: scroll;
-    display: flex;
-    flex-direction: column;
+    overflow-x: auto;
   }
 
   .post td, th {
@@ -122,5 +120,10 @@ layout: layout.html
   .post thead {
     color: #E53E3E;
     text-align: left;
+  }
+
+  .table-container {
+    width: 100%;
+    overflow-x: auto;
   }
 </style>
