@@ -32,6 +32,14 @@ module.exports = function(eleventyConfig) {
 
   eleventyConfig.addPlugin(syntaxHighlight);
 
+  eleventyConfig.addCollection("post", function(collectionApi) {
+    return collectionApi.getFilteredByGlob("src/posts/*.md").sort((a, b) => {
+      const aDate = new Date(a.date);
+      const bDate = new Date(b.date);
+      return bDate - aDate; // mais recentes primeiro
+    });
+  });
+
   return {
     dir: {
       input: 'src',
