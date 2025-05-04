@@ -1,4 +1,5 @@
 const { JSDOM } = require("jsdom");
+const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 
 module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy('src/assets');
@@ -27,6 +28,16 @@ module.exports = function(eleventyConfig) {
       return dom.serialize();
     }
     return content;
+  });
+
+  eleventyConfig.addPlugin(syntaxHighlight);
+
+  eleventyConfig.addCollection("post", function(collectionApi) {
+    return collectionApi.getFilteredByGlob("src/posts/*.md").sort((a, b) => {
+      const aDate = new Date(a.date);
+      const bDate = new Date(b.date);
+      return bDate - aDate; // mais recentes primeiro
+    });
   });
 
   return {
